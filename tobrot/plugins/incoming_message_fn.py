@@ -46,7 +46,7 @@ async def incoming_purge_message_f(client, message):
 async def incoming_message_f(client, message):
     """/leech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
+    credit = await message.reply_text(f"🧲 AiTorrentWare Leeching for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
@@ -106,7 +106,7 @@ async def incoming_message_f(client, message):
 async def incoming_gdrive_message_f(client, message):
     """/gleech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
+    credit = await message.reply_text(f"🧲 AiTorrentWare Leeching for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
@@ -164,7 +164,7 @@ async def incoming_gdrive_message_f(client, message):
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     g_id = message.from_user.id
-    credit = await message.reply_text(f"💀 Downloading for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
+    credit = await message.reply_text(f"💀 AiTorrentWare Downloading for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     # LOGGER.info(message)
     # extract link from message
@@ -228,7 +228,7 @@ async def g_yt_playlist(client, message):
         if message.command[1] == "gdrive":
             G_DRIVE = True
     if 'youtube.com/playlist' in message.reply_to_message.text:
-        i_m_sefg = await message.reply_text("💀 Downloading for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
+        i_m_sefg = await message.reply_text("💀 AiTorrentWare Downloading for <a href='tg://user?id={g_id}'> you </a>", parse_mode="html")
         await yt_playlist_downg(message.reply_to_message, i_m_sefg, G_DRIVE)
     
     else:
