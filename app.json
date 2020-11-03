@@ -1,0 +1,21 @@
+{
+  "name": "Telegram Torrent Leecher",
+  "description": "A Telegram Torrent (and youtube-dl) Leecher based on Pyrogram. Powered by @torrentleechgdrivesupport!",
+  "keywords": [
+    "telegram"
+  ],
+  "repository": "https://github.com/TMAdminz/AiTorrentWare",
+  "success_url": "https://t.me/AiTorrent_Ware",
+  "website": "https://github.com/TMAdminz/AiTorrentWare",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "RCLONE_CONFIG": {
+      "description": "Enter your copied text from rclone config. Compulsory for /gleech as well as /tleech command ",
+      "required": false
+    }
+  },
+  "stack": "container"
+}
