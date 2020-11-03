@@ -32,7 +32,7 @@ async def progress_for_pyrogram_g(
     if round(diff % 10.00) == 0 or current == total:
         # if round(current / total * 100, 0) % 5 == 0:
         percentage = current * 100 / total
-        speed = current / diff
+        speed = current / diff * 5
         elapsed_time = round(diff) * 1000
         time_to_completion = round((total - current) / speed) * 1000
         estimated_total_time = elapsed_time + time_to_completion
@@ -40,12 +40,12 @@ async def progress_for_pyrogram_g(
         elapsed_time = time_formatter(milliseconds=elapsed_time)
         estimated_total_time = time_formatter(milliseconds=estimated_total_time)
 
-        progress = "[{0}{1}] \nP: {2}%\n".format(
-            ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),
-            ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]),
+        progress = "[{0}{1}] \n\n <b>📊Percentage:</b> {2}%\n\n".format(
+            ''.join(["■ " for i in range(math.floor(percentage / 10))]),
+            ''.join(["□ " for i in range(10 - math.floor(percentage / 10))]),
             round(percentage, 2))
 
-        tmp = progress + "{0} of {1}\nSpeed: {2}/s\nETA: {3}\n".format(
+        tmp = progress + "<b>✅Completed:</b>{0} \n\n <b>📁Total Size:</b> {1}\n\n<b>🚀Speed:</b> {2}/s\n\n<b>⌚️ETA:</b> {3}\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
