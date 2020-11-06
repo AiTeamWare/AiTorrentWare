@@ -15,6 +15,26 @@
     "RCLONE_CONFIG": {
       "description": "Enter your copied text from rclone config. Compulsory for /gleech as well as /tleech command ",
       "required": false
+    },
+    "APP_ID": {
+      "description": "Enter your app id ",
+      "required": false
+    },
+    "API_HASH": {
+      "description": "Enter your api hash ",
+      "required": false
+    },
+    "TG_BOT_TOKEN": {
+      "description": "Enter your tg bot token ",
+      "required": false
+    },
+    "AUTH_CHANNEL": {
+      "description": "Enter your aut channel id ",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Enter your user id ",
+      "required": false
     }
   },
   "stack": "container"
